@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clans</title>
+    <link rel="stylesheet" href="/style/reset.css">
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+<body>
+    <img class="background" src="/assets/weapons-background.png" alt="">
+    <%- include('partials/nav') %>
+    <main class="clans">
+        <section>
+            <table>
+                <thead>
+                    <tr>
+                        <form action="/clans" method="get">
+                            <input name="q" type="text" placeholder="search" value="<%=q%>">
+                            <select name="sortField" id="" class="select-name">
+                                <option value="name" <%=sortField === "name" ? "selected" : ""%>>name</option>
+                                <option value="members" <%=sortField === "members" ? "selected" : ""%>>members</option>
+                                <option value="active" <%=sortField === "active" ? "selected" : ""%>>active</option>
+                            </select>
+                            <select name="sortDirection" id="">
+                                <option value="ascending" <%=sortDirection === "ascending" ? "selected" : ""%>>ascending</option>
+                                <option value="descending" <%=sortDirection === "descending" ? "selected" : ""%>>descending</option>
+                            </select>
+                            <button type="submit">submit</button>
+                        </form>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% data.forEach(item => { %>
+                        <tr>
+                            <td class="clans-name"><%= item.clan.name %></td>
+                            <td class="clans-description"><%= item.clan.description%></td>
+                            <td><%= item.clan.size%></td>
+                            <% if(item.clan.active){ %>
+                                <td class="active"><div style="background-color: rgb(1, 212, 1);"></div></td>
+                            <% }else{ %>
+                                <td class="active"><div style="background-color: rgb(255, 16, 16);"></div></td>
+                            <% } %>
+                            <td><a href="/clan/<%=item.clan.name%>">view</a></td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>Wilson Quayson</p>
+        <p>G_1PRO_D1</p>
+    </footer>
+</body>
+</html>

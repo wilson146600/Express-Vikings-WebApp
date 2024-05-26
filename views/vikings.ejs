@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viking</title>
+    <link rel="stylesheet" href="/style/reset.css">
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+<body>
+    <img class="background" src="/assets/weapons-background.png" alt="">
+    <%- include('partials/nav') %>
+    <main class="vikings">
+        <section class="vikings-section">
+            <% data.forEach(item => { %>
+                    <% if(item.name === viking){ %>
+                        <img src="<%=item.imageURL%>" alt="">
+                        <ul>
+                            <section class="viking-info">
+                                <p class="viking-name"><%= item.name %></p>
+                                <p class="viking-age">(<%= item.age %> jaar oud)</p>
+                            </section>
+                            <p class="viking-description"><%= item.description %></p>
+                            <li><p>wapen</p><p class="title-items"><%= item.weapon %></p></li>
+                            <li><p>geboortedatum</p><p class="title-items"><%= item.birthdate %></p></li>
+                            <li><p>familie</p><p class="title-items">
+                                <% if(item.name === "Thorfinn"){ %>
+                                    <a href="/vikings/Thors">Thors (vader)</a> <%= item.family[1] %> <%= item.family[2] %>
+                                <% } else if(item.name === "Thorkell"){ %>
+                                    <a href="/vikings/Thors">Thors (neef)</a>, <a href="/vikings/Thorfinn">Thorfinn (achterneef)</a>
+                                <% } else if(item.name === "Canute"){ %>
+                                    <a href="/vikings/Sweyn">Sweyn (vader)</a> <%= item.family[1] %>
+                                <% } else if(item.name === "Sweyn"){ %>
+                                    <a href="/vikings/Canute">Canute (zoon)</a> <%= item.family[1] %>
+                                <% } else if(item.name === "Thors"){ %>
+                                    <%= item.family[0] %> <a href="/vikings/Thorfinn">Thorfinn (zoon)</a> <%= item.family[2] %>
+                                <% } else{ %>
+                                    <%= item.family %>
+                                <% } %>
+                            </p></li>
+                            <li><p>leeft</p class="title-items"> <% if(item.alive){ %>
+                                <div style="background-color: rgb(1, 212, 1);"></div>
+                            <% }else{ %>
+                                <div style="background-color: rgb(255, 16, 16);"></div>
+                            <% } %></li>
+                            <hr>
+                            <section class="viking-clan-info">
+                                <section>
+                                    <p class="viking-clan-name"><%= item.clan.name%></p>
+                                    <p class="viking-clan-size">(<%= item.clan.size%> leden)</p>
+                                </section>
+                                <section>
+                                    <a href="/clan/<%=item.clan.name%>" class="view-clan">view</a>
+                                </section>
+                            </section>
+                        </ul>
+                    <% } %>
+            <% }) %>
+        </section>
+    </main>
+    <footer>
+        <p>Wilson Quayson</p>
+        <p>G_1PRO_D1</p>
+    </footer>
+</body>
+</html>

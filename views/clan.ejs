@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clan</title>
+    <link rel="stylesheet" href="/style/reset.css">
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+<body>
+    <img class="background" src="/assets/weapons-background.png" alt="">
+    <%- include('partials/nav') %>
+    <main class="vikings">
+        <section class="vikings-section">
+            <% uniqueClans.forEach(item => { %>
+                <% if(item.clan.name === clan){ %>
+                    <img src="<%=item.clan.imageURL%>" alt="">
+                    <ul>
+                        <section class="viking-info">
+                            <p class="viking-name"><%= item.clan.name %></p>
+                        </section>
+                        <p class="viking-description"><%= item.clan.description %></p>
+                        <li><p>actief</p> <% if(item.clan.active){ %>
+                            <div style="background-color: rgb(1, 212, 1);"></div>
+                        <% }else{ %>
+                            <div style="background-color: rgb(255, 16, 16);"></div>
+                        <% } %></li>
+                        <li><p>groote</p><p class="title-items"><%=item.clan.size%> leden</p></li>
+                    </ul>
+                <% } %>
+        <% }) %>
+        </section>
+    </main>
+    <footer>
+        <p>Wilson Quayson</p>
+        <p>G_1PRO_D1</p>
+    </footer>
+</body>
+</html>

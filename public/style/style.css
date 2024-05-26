@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Roboto+Slab&display=swap');
+
+body{
+    display: grid;
+    grid-template-rows: 10% 1fr 2%;
+    background-color: rgba(0, 0, 0, 0.235);
+    overflow-x: hidden;
+    font-family: "PT Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.background{
+    top: 40%;
+    right: -35%;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    opacity: 20%;
+    rotate: 90deg;
+}
+
+/*************************************NAV*********************************************/
+
+nav{
+    grid-row: 1;
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+nav ul{
+    display: flex;
+}
+
+nav ul li{
+    padding: 0.5rem;
+    transition: background-color 100ms;
+    display: flex;
+    margin-left: 0.5rem;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    transition: color 100ms ease-out;
+}
+
+nav ul li:hover{
+    background-color: rgb(50, 50, 50);
+}
+
+nav ul li:hover a{
+    color: white;
+}
+
+/*************************************HOME*********************************************/
+/******************MAIN****************/
+
+div{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+}
+
+/******************FOOTER****************/
+
+footer{
+    margin-top: 8rem;
+    grid-row: 3;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+footer p{
+    color: white;
+    display: flex;
+}
+
+/*************************************VIKING*********************************************/
+
+.vikings{
+    padding-top: 5rem;
+}
+
+.vikings a{
+    color: black;
+    opacity: 70%;
+}
+
+.vikings-section{
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(255, 255, 255, 0.479);
+    padding: 1rem;
+}
+
+.vikings section ul{
+    margin-top: 1rem;
+}
+
+.vikings section ul li{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.vikings img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.viking-info{
+    display: flex;
+}
+
+.viking-clan-info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.viking-name{
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.viking-age{
+    color: rgba(0, 0, 0, 0.498);
+}
+
+.viking-clan-name{
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.viking-clan-size{
+    font-size: small;
+    color: rgba(0, 0, 0, 0.498);
+}
+
+.view-clan{
+    color: rgba(0, 0, 0, 0.742);
+}
+
+.title-items{
+    font-weight: bold;
+}
+
+#pencil{
+    margin-left: 5px;
+    opacity: 20%;
+}
+
+#pencil:hover{
+    opacity: 70%;
+}
+
+
+/*************************************CLANS/HOME*********************************************/
+
+.clans{
+    display: flex;
+    justify-content: center;
+}
+
+.clans section{
+    width: 90%;
+    margin-top: 2rem;
+}
+
+.clans section table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+tbody{
+    background-color: rgba(0, 0, 0, 0.539);
+}
+
+tbody tr td{
+    color: rgba(255, 255, 255, 0.6);
+}
+
+tbody tr{
+    border: 1px solid black;
+    height: 7.5rem;
+}
+
+tbody tr td{
+    vertical-align: middle;
+    text-align: center;
+}
+
+tbody tr td a{
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.description{
+    width: 25%;
+    font: small;
+}
+
+.active{
+    width: 10%;
+}
+
+.active div{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.clans-name{
+    width: 20%;
+}
+
+.clans-description{
+    width: 50%;
+}
+
+.viking-description{
+    margin-top: 2rem;
+}
+
+button{
+    background: none;
+    cursor: pointer;
+    border: 1px solid black;
+    margin-left: 0.5rem;
+}
+
+input{
+    width: 30%;
+    background: none;
+    border: 1px solid black;
+}
+
+select{
+    background: none;
+    border: 1px solid black;
+    cursor: pointer;
+    margin-left: 0.5rem;
+}
+
+select option{
+    background-color: rgba(0, 0, 0, 0.482);
+}
+
+@media only screen and (max-width: 800px){
+    table{
+        font-size: 15px;
+    }
+
+    img.background{
+        display: none;
+    }
+
+    .vikings-section{
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 750px){
+    table{
+        font-size: 12.5px;
+    }
+
+    img.background{
+        display: none;
+    }
+
+    .vikings-section{
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 650px){
+    table{
+        font-size: 10px;
+    }
+
+    .vikings-section{
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    table{
+        font-size: 10px;
+    }
+
+    .clans section{
+        width: 100%;
+        margin-top: 0rem;
+    }
+
+    img.background{
+        display: none;
+    }
+
+    body{
+        grid-template-rows: 5% 1fr 2%;
+    }
+
+    .vikings-section{
+        width: 80%;
+    }
+}
+
+.tbody-titles{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 0.5rem;
+}
+
+/*************************************EDIT***********************************/
+
+.edit{
+    margin-top: 7rem;
+}
+
+.edit section{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.edit section form{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.543);
+    color: rgba(255, 255, 255, 0.6);
+    padding: 1rem;
+}
+
+.edit section form input,.edit section form select{
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.edit section form input,.edit section form select,.edit section form label{
+    margin-bottom: 0.5rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.edit section form button{
+    background-color: rgba(255, 255, 255, 0.6);
+    color: rgba(0, 0, 0, 0.543);
+    width: 10rem;
+    margin-top: 1rem;
+}
+
+/*********************** LOGIN ************************/
+
+.login section{
+    width: 20rem;
+    padding-top: 15rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login section form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.login section form input{
+    width: 100%;
+}
+
+.login section form button{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+}

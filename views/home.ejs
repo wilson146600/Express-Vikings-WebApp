@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vikings</title>
+    <link rel="stylesheet" href="/style/reset.css">
+    <link rel="stylesheet" href="/style/style.css">
+    <script src="/script/show-edit.js" defer></script>
+</head>
+<body>
+    <img class="background" src="/assets/weapons-background.png" alt="">
+    <%- include('partials/nav') %>
+    <main class="clans">
+        <section>
+            <table>
+                <thead>
+                    <tr>
+                        <form action="/" method="get">
+                            <input name="q" type="text" placeholder="search" value="<%=q%>">
+                            <select name="sortField" id="" class="select-name">
+                                <option value="name" <%=sortField === "name" ? "selected" : ""%>>name</option>
+                                <option value="clan" <%=sortField === "clan" ? "selected" : ""%>>clan</option>
+                                <option value="age" <%=sortField === "age" ? "selected" : ""%>>age</option>
+                                <option value="weapon" <%=sortField === "weapon" ? "selected" : ""%>>weapon</option>
+                                <option value="alive" <%=sortField === "alive" ? "selected" : ""%>>alive</option>
+                            </select>
+                            <select name="sortDirection" id="">
+                                <option value="ascending" <%=sortDirection === "ascending" ? "selected" : ""%>>ascending</option>
+                                <option value="descending" <%=sortDirection === "descending" ? "selected" : ""%>>descending</option>
+                            </select>
+                            <button type="submit">submit</button>
+                        </form>
+                    </tr>
+                </thead>
+                <section class="tbody-titles">
+                    <p>name</p>
+                    <p>clan</p>
+                    <p>age</p>
+                    <p>weapon</p>
+                    <p>description</p>
+                    <p>alive</p>
+                </section>
+                <tbody>
+                    <% data.forEach(item => { %>
+                        <tr>
+                            <td><%= item.name %></td>
+                            <td><a href="/clan/<%=item.clan.name%>"><%= item.clan.name %></a></td>
+                            <td><%= item.age%></td>
+                            <td><%= item.weapon%></td>
+                            <td class="description"><%= item.description%></td>
+                            <% if(item.alive){ %>
+                                <td class="active"><div style="background-color: rgb(1, 212, 1);"></div></td>
+                            <% }else{ %>
+                                <td class="active"><div style="background-color: rgb(255, 16, 16);"></div></td>
+                            <% } %>
+                            <td><a href="/vikings/<%=item.name%>">view</a></td>
+                            <% if(user.role == "ADMIN"){ %>
+                                <td><a href="/vikings/<%=item.id%>/edit">edit</a></td>
+                            <% } %>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>Wilson Quayson</p>
+        <p>G_1PRO_D1</p>
+    </footer>
+</body>
+</html>

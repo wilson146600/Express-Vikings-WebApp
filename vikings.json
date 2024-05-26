@@ -1,0 +1,193 @@
+[
+    {
+      "id": 1,
+      "name": "Thorfinn",
+      "description": "Thorfinn is een jonge Viking die gedreven wordt door wraak nadat zijn vader is vermoord.",
+      "age": 17,
+      "alive": true,
+      "birthdate": "1009-03-03",
+      "imageURL": "https://raw.githubusercontent.com/wilson146600/Images-Project-Webontwikkeling/97b9309d692ddfbccfe9a58e4c2b09ec3e4e56cb/Thorfinn1013.webp",
+      "weapon": "Twin Daggers",
+      "family": ["Thors (vader)", "Helga (moeder)", "Ylva (zuster)"],
+      "clan": {
+        "id": 1,
+        "name": "Askeladd's Mercenaries",
+        "description": "Een groep huurlingen geleid door Askeladd, bekend om hun flexibiliteit en efficiëntie in gevechten.",
+        "size": 150,
+        "imageURL": "https://raw.githubusercontent.com/wilson146600/Images-Project-Webontwikkeling/main/askeladsMercenaries.webp",
+        "active": false
+      }
+    },
+    {
+      "id": 2,
+      "name": "Askeladd",
+      "description": "Askeladd is een sluwe en charismatische Viking-krijger die bekend staat om zijn strategisch denken en meesterlijke zwaardvechtkunsten.",
+      "age": 35,
+      "alive": false,
+      "birthdate": "979-08-15",
+      "imageURL": "https://raw.githubusercontent.com/wilson146600/Images-Project-Webontwikkeling/97b9309d692ddfbccfe9a58e4c2b09ec3e4e56cb/Askeladd29.webp",
+      "weapon": "Zwaard",
+      "family": ["Olaf (vader)", "Lydia (moeder)"],
+      "clan": {
+        "id": 1,
+        "name": "Askeladd's Mercenaries",
+        "description": "Een groep huurlingen geleid door Askeladd, bekend om hun flexibiliteit en efficiëntie in gevechten.",
+        "size": 150,
+        "imageURL": "https://raw.githubusercontent.com/wilson146600/Images-Project-Webontwikkeling/main/askeladsMercenaries.webp",
+        "active": false
+      }
+    },
+    {
+      "id": 3,
+      "name": "Thorkell",
+      "description": "Thorkell is een gigantische Viking die bekend staat om zijn brute kracht en liefde voor vechten.",
+      "age": 45,
+      "alive": true,
+      "birthdate": "969-05-20",
+      "imageURL": "https://raw.githubusercontent.com/wilson146600/Images-Project-Webontwikkeling/97b9309d692ddfbccfe9a58e4c2b09ec3e4e56cb/Thorkell1017.webp",
+      "weapon": "Groot Bijl",
+      "family": ["Thors (neef)", "Thorfinn (achterneef)"],
+      "clan": {
+        "id": 2,
+        "name": "Jomsvikings",
+        "description": "Een legendarische groep Vikingkrijgers berucht om hun meedogenloosheid en strijdlust.",
+        "size": 300,
+        "imageURL": "https://raw.githubusercontent.com/wilson146600/Images-Project-Webontwikkeling/main/JomsVikings.webp",
+        "active": true
+      }
+    },
+    {
+      "id": 4,
+      "name": "Canute",
+      "description": "Canute is een jonge prins van Denemarken, die aanvankelijk verlegen en timide is, maar langzaam zijn kracht en vastberadenheid vindt.",
+      "age": 16,
+      "alive": true,
+      "birthdate": "1007-11-11",
+      "imageURL": "https://raw.githubusercontent.com/wilson146600/Images-Project-Webontwikkeling/97b9309d692ddfbccfe9a58e4c2b09ec3e4e56cb/Canute.webp",
+      "weapon": "Geen",
+      "family": ["Sweyn (vader)", "Estrid (zus)"],
+      "clan": {
+        "id": 3,
+        "name": "Koninkrijk Denemarken",
+        "description": "Een machtige Vikingnatie geregeerd door koning Sweyn Forkbeard.",
+        "size": 20000,
+        "imageURL": "https://raw.githubusercontent.com/wilson146600/Images-Project-Webontwikkeling/main/Denmark.webp",
+        "active": true
+      }
+    },
+    {
+      "id": 5,
+      "name": "Leif Erikson",
+      "description": "Leif Erikson is een ervaren Viking-zeevaarder en ontdekkingsreiziger die bekend staat om zijn ontdekking van Vinland, het moderne Noord-Amerika.",
+      "age": 55,
+      "alive": true,
+      "birthdate": "950-10-09",
+      "imageURL": "https://raw.githubusercontent.com/wilson146600/Images-Project-Webontwikkeling/97b9309d692ddfbccfe9a58e4c2b09ec3e4e56cb/Leif.webp",
+      "weapon": "Zwaard",
+      "family": ["Erik (vader)", "Torvald (broer)"],
+      "clan": {
+        "id": 4,
+        "name": "Erikson Clan",
+        "description": "Een invloedrijke Vikingfamilie bekend om hun avontuurlijke geest en zeevaardersvaardigheden.",
+        "size": 30,
+        "imageURL": "https://raw.githubusercontent.com/wilson146600/Images-Project-Webontwikkeling/main/erikson.webp",
+        "active": true
+      }
+    },
+    {
+      "id": 6,
+      "name": "Floki",
+      "description": "Floki is een Viking-schelm en handelaar die vaak betrokken is bij dubieuze deals en intrige.",
+      "age": 40,
+      "alive": true,
+      "birthdate": "984-02-28",
+      "imageURL": "https://raw.githubusercontent.com/wilson146600/Images-Project-Webontwikkeling/97b9309d692ddfbccfe9a58e4c2b09ec3e4e56cb/Floki.webp",
+      "weapon": "Dolk",
+      "family": ["Baldr (kleinzoon)"],
+      "clan": {
+        "id": 5,
+        "name": "Onafhankelijke handelaars",
+        "description": "Een losse associatie van handelaren en smokkelaars die opereert buiten de reguliere machtsstructuren.",
+        "size": 40,
+        "imageURL": "https://raw.githubusercontent.com/wilson146600/Images-Project-Webontwikkeling/main/onhafhankelijke2.webp",
+        "active": true
+      }
+    },
+    {
+      "id": 7,
+      "name": "Sweyn",
+      "description": "Sweyn is een machtige en meedogenloze koning van Denemarken, die vastbesloten is om zijn rijk uit te breiden en zijn vijanden te onderwerpen.",
+      "age": 50,
+      "alive": false,
+      "birthdate": "974-04-11",
+      "imageURL": "https://raw.githubusercontent.com/wilson146600/Images-Project-Webontwikkeling/97b9309d692ddfbccfe9a58e4c2b09ec3e4e56cb/Sweyn.webp",
+      "weapon": "Geen",
+      "family": ["Canute (zoon)", "Estrid (dochter)"],
+      "clan": {
+        "id": 8,
+        "name": "Koninkrijk Denemarken",
+        "description": "De koninklijke familie van Denemarken, die heerst over een rijk verscheurd door politieke intrige en oorlog.",
+        "size": 20000,
+        "imageURL": "https://raw.githubusercontent.com/wilson146600/Images-Project-Webontwikkeling/main/Denmark.webp",
+        "active": true
+      }
+    },
+    {
+      "id": 8,
+      "name": "Gudrid",
+      "description": "Gudrid is een dappere Viking-vrouw die bekend staat om haar moed en wijsheid in moeilijke situaties.",
+      "age": 25,
+      "alive": true,
+      "birthdate": "999-09-21",
+      "imageURL": "https://raw.githubusercontent.com/wilson146600/Images-Project-Webontwikkeling/97b9309d692ddfbccfe9a58e4c2b09ec3e4e56cb/Gudrid.webp",
+      "weapon": "Speer",
+      "family": ["Otto (broer)", "Asrid (zus)"],
+      "clan": {
+        "id": 7,
+        "name": "Shieldmaidens",
+        "description": "Een groep vrouwelijke Viking-krijgers bekend om hun moed en vastberadenheid in de strijd",
+        "size": 55,
+        "imageURL": "https://raw.githubusercontent.com/wilson146600/Images-Project-Webontwikkeling/main/shieldmaidens.webp",
+        "active": true
+      }
+    },
+    {
+      "id": 9,
+      "name": "Thors",
+      "description": "Thors was ooit een legendarische krijger, maar verliet het gewelddadige leven van een Viking om een rustig bestaan te leiden als boer en vader.",
+      "age": 40,
+      "alive": false,
+      "birthdate": "969-08-15",
+      "imageURL": "https://raw.githubusercontent.com/wilson146600/Images-Project-Webontwikkeling/97b9309d692ddfbccfe9a58e4c2b09ec3e4e56cb/Thors.webp",
+      "weapon": "Zwaard",
+      "family": ["Helga (vrouw)", "Thorfinn (zoon)", "Ylva (dochter)"],
+      "clan": {
+        "id": 2,
+        "name": "Jomsvikings",
+        "description": "Een legendarische groep Vikingkrijgers die bekend staan om hun moed en loyaliteit.",
+        "size": 300,
+        "imageURL": "https://raw.githubusercontent.com/wilson146600/Images-Project-Webontwikkeling/main/JomsVikings.webp",
+        "active": true
+      }
+    },
+    {
+      "id": 10,
+      "name": "Bjorn",
+      "description": "Bjorn is een imposante en meedogenloze krijger die bekend staat om zijn brute kracht en zijn loyaliteit aan zijn leider.",
+      "age": 35,
+      "alive": false,
+      "birthdate": "989-06-30",
+      "imageURL": "https://raw.githubusercontent.com/wilson146600/Images-Project-Webontwikkeling/main/Bjorn.webp",
+      "weapon": "Groot Bijl",
+      "family": ["Onbekend"],
+      "clan": {
+        "id": 1,
+        "name": "Askeladd's Mercenaries",
+        "description": "Een groep huurlingen onder leiding van Askeladd, bekend om hun brute kracht en meedogenloosheid in de strijd.",
+        "size": 150,
+        "imageURL": "https://raw.githubusercontent.com/wilson146600/Images-Project-Webontwikkeling/main/askeladsMercenaries.webp",
+        "active": false
+      }
+    }
+]
+  

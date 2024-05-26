@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vikings</title>
+    <link rel="stylesheet" href="/style/reset.css">
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+<body>
+    <img class="background" src="/assets/weapons-background.png" alt="">
+    <%- include('partials/nav') %>
+    <main class="edit">
+        <section>
+            <form action="/vikings/<%= viking.id %>/edit" method="post">
+                <label for="name"><%=viking.name%></label>
+                <input name="name" type="text" value="<%=viking.name%>" placeholder="<%=viking.name%>">
+
+                <label for="age">Age:</label>
+                <input name="age" type="number" value="<%=viking.age%>" placeholder="<%=viking.age%>">
+
+                <label for="weapon">weapon:</label>
+                <select name="weapon" id="weapon">
+                    <option value="Twin Daggers" <%=viking.weapon === "Twin Daggers" ? "selected" : ""%>>Twin Daggers</option>
+                    <option value="Zwaard" <%=viking.weapon === "Zwaard" ? "selected" : ""%>>Zwaard</option>
+                    <option value="Groot Bijl" <%=viking.weapon === "Groot Bijl" ? "selected" : ""%>>Groot Bijl</option>
+                    <option value="Geen" <%=viking.weapon === "Geen" ? "selected" : ""%>>Geen</option>
+                    <option value="Dolk" <%=viking.weapon === "Dolk" ? "selected" : ""%>>Dolk</option>
+                    <option value="Speer" <%=viking.weapon === "Speer" ? "selected" : ""%>>Speer</option>
+                </select>
+
+                <label for="alive">Alive:</label>
+                <select name="alive" id="alive">
+                    <option value="true" <%=viking.alive ? "selected" : ""%>>Alive</option>
+                    <option value="false" <%=!viking.alive ? "selected" : ""%>>Dead</option>
+                </select>
+
+                <button type="submit">Update</button>
+
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Wilson Quayson</p>
+        <p>G_1PRO_D1</p>
+    </footer>
+</body>
+</html>
